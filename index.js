@@ -200,13 +200,15 @@ console.log(listMenuItemNamesByCategory(menu, "Main Course"));
   **********/
 
 function getCheapestMenuItem(menu) {
+  let object = {};
   let cheapest = menu[0].price;
   menu.forEach((menu) => {
     if (menu.price < cheapest) {
       cheapest = menu.price;
+      object = menu;
     }
   });
-  return cheapest;
+  return object;
 }
 console.log(getCheapestMenuItem(menu));
 
